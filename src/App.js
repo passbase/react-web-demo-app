@@ -12,6 +12,7 @@ function App() {
       <VerifyButton
         apiKey={"YOUR_PUBLISHABLE_API_KEY"}
         onFinished={(error, authKey, additionalAttributes) => {}}
+        integrationType={"signup"}
         additionalAttributes={{ }}
         prefillAttributes={{ }}
         theme={{ }}
@@ -22,6 +23,7 @@ function App() {
       <VerifyButton
         apiKey={"YOUR_PUBLISHABLE_API_KEY"}
         onFinished={(error, authKey, additionalAttributes) => {}}
+        integrationType={"signup"}
         additionalAttributes={{
           customer_user_id: "a2ab4-f2jc4-k2dd4-1fa3x",
           another_attribute: ""
@@ -35,6 +37,18 @@ function App() {
           font: "Exo", 
           darkMode: true
         }}
+      />;
+      */}
+
+      {/* Reauthentication without customizations */}       
+      {/*
+      <VerifyButton
+      apiKey={"YOUR_PUBLISHABLE_API_KEY"}
+        onFinished={(error, authKey, additionalAttributes) => {}}
+        integrationType={"login"}
+        additionalAttributes={{ }}
+        prefillAttributes={{ }}
+        theme={{ }}
       />;
       */}
 
