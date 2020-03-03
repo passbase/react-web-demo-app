@@ -10,7 +10,7 @@ function App() {
 
       {/* Without customizations */}       
       <VerifyButton
-        apiKey={"YOUR_PUBLISHABLE_API_KEY"}
+        apiKey={"YOUR_OWN_PUBLISHABLE_API_KEY"}
         onFinished={(error, authKey, additionalAttributes) => {}}
         integrationType={"signup"}
         additionalAttributes={{ }}
@@ -21,7 +21,7 @@ function App() {
       {/* With customizations */}       
       {/* 
       <VerifyButton
-        apiKey={"YOUR_PUBLISHABLE_API_KEY"}
+        apiKey={"YOUR_OWN_PUBLISHABLE_API_KEY"}
         onFinished={(error, authKey, additionalAttributes) => {}}
         integrationType={"signup"}
         additionalAttributes={{
@@ -43,7 +43,7 @@ function App() {
       {/* Reauthentication without customizations */}       
       {/*
       <VerifyButton
-      apiKey={"YOUR_PUBLISHABLE_API_KEY"}
+      apiKey={"YOUR_OWN_PUBLISHABLE_API_KEY"}
         onFinished={(error, authKey, additionalAttributes) => {}}
         integrationType={"login"}
         additionalAttributes={{ }}
