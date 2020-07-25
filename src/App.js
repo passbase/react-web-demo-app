@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Passbase from "@passbase/button";
 import VerifyButton from "@passbase/button/react";
 
 function App() {
