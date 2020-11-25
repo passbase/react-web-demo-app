@@ -1,56 +1,37 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import VerifyButton from "@passbase/button/react";
 
 function App() {
+  const referenceUserWithKey = (key) => {
+    console.log(key);
+    // Make request to your backend/db and save the key to the user's profile
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-
-      {/* Without customizations */}       
-      <VerifyButton
-        apiKey={"YOUR_OWN_PUBLISHABLE_API_KEY"}
-        onFinished={(error, authKey, additionalAttributes) => {}}
-        integrationType={"signup"}
-        additionalAttributes={{ }}
-        prefillAttributes={{ }}
-        theme={{ }}
-      />;
-       
-      {/* With customizations */}       
-      {/* 
-      <VerifyButton
-        apiKey={"YOUR_OWN_PUBLISHABLE_API_KEY"}
-        onFinished={(error, authKey, additionalAttributes) => {}}
-        integrationType={"signup"}
-        additionalAttributes={{
-          customer_user_id: "a2ab4-f2jc4-k2dd4-1fa3x",
-          another_attribute: ""
-        }}
-        prefillAttributes={{
-          email: "user@test.com",
-          country: "de"
-        }}
-        theme={{
-          accentColor: "#ff0000",
-          font: "Exo", 
-          darkMode: true
-        }}
-      />;
-      */}
-
-      {/* Reauthentication without customizations */}       
-      {/*
-      <VerifyButton
-      apiKey={"YOUR_OWN_PUBLISHABLE_API_KEY"}
-        onFinished={(error, authKey, additionalAttributes) => {}}
-        integrationType={"login"}
-        additionalAttributes={{ }}
-        prefillAttributes={{ }}
-        theme={{ }}
-      />;
-      */}
-
+        {/* Without customizations */}
+        <VerifyButton
+          apiKey={"YOUR_API_KEY"}
+          onFinish={(identityAccessKey) => {
+            referenceUserWithKey(identityAccessKey);
+          }}
+          onError={(errorCode) => {}}
+          onStart={() => {}}
+        />
+        {/* With customizations */}
+        {/* <VerifyButton
+          apiKey={"YOUR_API_KEY"}
+          onFinish={(identityAccessKey) => {}}
+          prefillAttributes={{
+            email: "hans.meier@corp.de",
+          }}
+          theme={{
+            darkMode: true,
+            systemDarkMode: true,
+          }}
+        /> */}
       </header>
     </div>
   );
