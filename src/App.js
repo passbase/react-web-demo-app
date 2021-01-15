@@ -16,6 +16,9 @@ function App() {
           apiKey={"YOUR_API_KEY"}
           onFinish={(identityAccessKey) => {
             referenceUserWithKey(identityAccessKey);
+            console.log(identityAccessKey)
+            // open new window when end user completes verification
+            window.location.href =("https://passbase.com/")
           }}
           onError={(errorCode) => {}}
           onStart={() => {}}
