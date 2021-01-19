@@ -10,10 +10,22 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        {/* Without customizations */}
+      <img
+        className="img-fluid passbase"
+        src="https://passbase.com/assets/images/logo.png"
+        alt="Passbase"
+      />
+
+      <div className="container">
+        <p className="title">Welcome to this Demo</p>
+        <p className="subtitle">
+          Click the button below to start a new verification.
+        </p>
+
         <VerifyButton
-          apiKey={"YOUR_API_KEY"}
+          apiKey={
+            "YOUR_PUBLISHABLE_KEY"
+          }
           onFinish={(identityAccessKey) => {
             referenceUserWithKey(identityAccessKey);
             console.log(identityAccessKey)
@@ -23,19 +35,7 @@ function App() {
           onError={(errorCode) => {}}
           onStart={() => {}}
         />
-        {/* With customizations */}
-        {/* <VerifyButton
-          apiKey={"YOUR_API_KEY"}
-          onFinish={(identityAccessKey) => {}}
-          prefillAttributes={{
-            email: "hans.meier@corp.de",
-          }}
-          theme={{
-            darkMode: true,
-            systemDarkMode: true,
-          }}
-        /> */}
-      </header>
+      </div>
     </div>
   );
 }
