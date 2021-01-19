@@ -24,7 +24,7 @@ function App() {
 
         <VerifyButton
           apiKey={
-            "YOUR_PUBLISHABLE_KEY"
+            "YOUR_OWN_PUBLISHABLE_API_KEY"
           }
           onFinish={(identityAccessKey) => {
             referenceUserWithKey(identityAccessKey);
